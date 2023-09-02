@@ -3,12 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <title>Bookshelf</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
   </head>
   <body>
+    <header class="header">
+      <div class="container">
+        <include src="./partials/header.html"></include>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="categories">
+          <include src="./partials/categories.html"></include>
+        </div>
+        <div>
+          <include src="./partials/charity.html"></include>
+        </div>
+        <div>
+          <include src="./partials/home-page.html"></include>
+        </div>
+      </div>
+      <include src="./partials/popup.html"></include>
+    </main>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <include src="./partials/modal.html"></include>
+    <include src="./partials/dark-theme.html"></include>
+    <!-- JS LINKS -->
+    <script type="module" src="./js/shopping-list.js"></script>
+    <script type="module" src="./js/header.js"></script>
+    <script type="module" src="./js/categories.js"></script>
+    <script type="module" src="./js/home-page.js"></script>
+    <script type="module" src="./js/charity.js"></script>
+    <script type="module" src="./js/pagination.js"></script>
+    <script type="module" src="./js/modal.js"></script>
+    <script type="module" src="./js/dark-theme.js"></script>
+    <script type="module" src="./js/popup.js"></script>
   </body>
 </html>
