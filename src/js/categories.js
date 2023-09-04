@@ -1,26 +1,26 @@
-const categories = document.querySelector('.categories');
+const categoriesList = document.querySelector('.categories-list');
 
-function renderCategoriesMarkup() {
-  fetch('https://books-backend.p.goit.global/books/category-list')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(response.status);
-      }
-      return response.json();
-    })
-    .then(data => {
-      console.log(data);
-      const markup = data.map(({ list_name }) => {
-        `<li class="categories-item all-categories">
-<a href="" class="categories-item-link all-categories-link"
-  >${list_name}</a
->
-</li>`;
-      });
-    })
-    .catch(error => {
-      console.log(error);
-    });
+console.log(categoriesList);
+
+fetchCategories().then(categories => renderCategoriesList(categories));
+
+function fetchCategories() {
+  const URL = 'https://books-backend.p.goit.global/books/category-list';
+  return fetch(URL).then(response => {
+    if (!response.ok) {
+      throw new Error(response.status);
+    }
+    return response.json();
+  });
 }
 
-renderCategoriesMarkup();
+function renderCategoriesList(categories) {
+  const markup = categories
+    .map(({ list_name }) => {
+      return `<li class="categories-list-item">${list_name}</li>`;
+    })
+    .join('');
+  categoriesList.innerHTML =
+    `<li class="categories-list-item all-categories">All categories</li>` +
+    markup;
+}

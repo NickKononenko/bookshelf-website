@@ -1,7 +1,35 @@
-// .categories {
-//   display: flex;
-//   flex-direction: column;
-//   row-gap: 32px;
-//   width: 356px;
-//   height: 472px;
-// }
+.categories {
+  height: 228px;
+  width: 335px;
+  overflow-y: scroll;
+}
+
+.categories::-webkit-scrollbar {
+  width: 8px;
+}
+
+.categories::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  background-color: #e0e0e0;
+  height: 114px;
+}
+
+.categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.categories-list-item {
+  color: rgba(17, 17, 17, 0.6);
+  line-height: 18px;
+  letter-spacing: -0.32px;
+}
+
+.all-categories {
+  color: #4f2ee8;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.32px;
+  text-transform: uppercase;
+}
