@@ -1,0 +1,2 @@
+!function(){var t=document.querySelector(".categories-list");console.log(t),fetch("https://books-backend.p.goit.global/books/category-list").then((function(t){if(!t.ok)throw new Error(t.status);return t.json()})).then((function(e){return function(e){var o=e.map((function(t){var e=t.list_name;return'<li class="categories-list-item">'.concat(e,"</li>")})).join("");t.innerHTML='<li class="categories-list-item all-categories">All categories</li>'+o}(e)}))}();
+//# sourceMappingURL=index.8490a691.js.map

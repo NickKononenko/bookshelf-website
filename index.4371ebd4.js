@@ -1,0 +1,2 @@
+const t=document.querySelector(".categories-list");console.log(t),fetch("https://books-backend.p.goit.global/books/category-list").then((t=>{if(!t.ok)throw new Error(t.status);return t.json()})).then((e=>function(e){const o=e.map((({list_name:t})=>`<li class="categories-list-item">${t}</li>`)).join("");t.innerHTML='<li class="categories-list-item all-categories">All categories</li>'+o}(e)));
+//# sourceMappingURL=index.4371ebd4.js.map
